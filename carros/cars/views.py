@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from cars.models import Car
 
 # Create your views here.
 def cars_view(request):
-    return render(request, "cars.html", {"cars": "gol bolinha"})
+    cars = Car.objects.all()
+    return render(request, "cars.html", {"cars": cars})
