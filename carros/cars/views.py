@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def cars_view(request):
-    return HttpResponse("<h1>Carros</h1>")
+    return render(request, "cars.html", {"cars": "gol bolinha"})
